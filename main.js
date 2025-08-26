@@ -82,6 +82,9 @@ const products = [
 ]
 
 const productList = document.getElementById('product-list')
+const searchInput = document.getElementById('search')
+const sortSelect = document.getElementById('sort')
+const resetBtn = document.getElementById('reset')
 
 function renderProducts(items) {
   productList.innerHTML = ''
@@ -100,5 +103,30 @@ function renderProducts(items) {
     productList.appendChild(li)
   })
 }
+
+function applyFilters() {
+  let filtered = [...products]
+  const searchText = searchInput.value.toLowerCase()
+  if (searchText) {
+    filtered = filtered.filter((p) => p.name.toLowerCase().includes(searchText))
+  }
+
+  const sortValue = sortSelect.value
+  if (sortValue === 'asc') {
+    filtered.sort((a, b) => a.price - b.price)
+  } else if (sortValue === 'desc') {
+    filtered.sort((a, b) => b.price - a.price)
+  }
+
+  renderProducts(filtered)
+}
+
+searchInput.addEventListener('input', applyFilters)
+sortSelect.addEventListener('change', applyFilters)
+resetBtn.addEventListener('click', () => {
+  searchInput.value = ''
+  sortSelect.value = ''
+  renderProducts(products)
+})
 
 renderProducts(products)
