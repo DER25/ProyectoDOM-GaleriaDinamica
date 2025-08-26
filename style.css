@@ -59,6 +59,66 @@ main {
   padding: 1rem;
 }
 
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filtros input,
+.filtros select,
+.filtros button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.filtros button {
+  background-color: var(--color-primario);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.filtros button:hover {
+  background-color: #e65c00;
+}
+
+.productos ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.productos article {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.productos article:hover {
+  transform: scale(1.05);
+}
+
+.productos img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.productos a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primario);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
