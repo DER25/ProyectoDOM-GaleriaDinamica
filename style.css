@@ -126,3 +126,25 @@ footer {
   color: #fff;
   margin-top: 2rem;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .filtros {
+    flex-direction: column;
+  }
+}
+
+/* Móvil */
+@media (max-width: 375px) {
+  .banner {
+    padding: 1rem;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
