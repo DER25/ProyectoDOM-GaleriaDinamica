@@ -46,6 +46,19 @@ header nav a {
   text-decoration: none;
 }
 
+.banner {
+  background: url('https://picsum.photos/1200/300') center/cover;
+  padding: 3rem;
+  text-align: center;
+  color: #fff;
+}
+
+main {
+  max-width: var(--max-ancho);
+  margin: auto;
+  padding: 1rem;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
